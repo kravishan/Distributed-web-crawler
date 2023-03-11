@@ -13,11 +13,11 @@
 `requirements`.txt: A file that lists the required packages for the project.
 
 ## Installation:
-To install the required packages for this project, run the following command:<br />
+To install the required packages for this project, run the following command:<br /><br />
 `pip install -r requirements.txt
 `
 ## Usage:
-To start the web scraper, run the following command:<br />
+To start the web scraper, run the following command:<br /><br />
 `
 python app.py
 `

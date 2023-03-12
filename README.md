@@ -1,4 +1,4 @@
-# distributed-web-crawler
+# Distributed Web Crawler
 
 ## File Descriptions:
 

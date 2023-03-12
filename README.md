@@ -1,5 +1,7 @@
 # Distributed Web Crawler
 
+The Distributed Web Crawler is a Python project that allows users to crawl and scrape websites. The project is distributed across multiple nodes, each running on a separate port, and utilizes Flask to serve as the endpoint for the scraper and crawler. The project structure consists of multiple modules, including app.py, content.py, crawler.py, generate_urls.py, and node.py. Users can interact with the command-line interface to choose between scraping or crawling a website, and the scraped data is stored in the storage directory. The project requires packages such as Flask, aiohttp, asyncio, and prometheus_client to function.
+
 ## Project Structure:
 
 ├── app.py<br />

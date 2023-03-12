@@ -96,5 +96,16 @@ This is the main module of the project which serves as the entry point to the ap
 - `main()`: This function is the entry point to the application. It contains a loop that waits for user input to either crawl or scrape a website.
 
 ## storage/
-This directory is where the scraped data is stored. The data is stored as HTML files, with filenames based on the URLs.
+The `storage/` directory is where the scraped data is stored. The `crawler.py` module stores the HTML content of each page it crawls in a file within the `storage/` directory. The name of the file is based on the URL of the page being crawled.
+
+It is important to note that the storage directory should not be directly accessed by any other module of the project. The storage files are only accessed by the `crawler.py` module and should be accessed through the `content.py` module.
+## content.py
+This module contains functions to read the content of files stored in the `storage/` directory. The functions should be used to read the content of files stored in the `storage/` directory, as they handle file access errors and return useful messages to the user.
+### Functions
+- `read_content_from_file(url)`: This function takes in a URL, reads the content of the file associated with that URL in the `storage/` directory and returns the content as a string. If the file does not exist, the function returns a message indicating that the file could not be found.
+- `check_if_file_exists(url)`: This function takes in a URL, checks if the file associated with that URL exists in the `storage/` directory, and returns True if the file exists and False otherwise.
+## Conclusion
+This project provides an example of a distributed web crawler that can be used to scrape or crawl websites. The crawler is designed to work on multiple nodes, with each node responsible for crawling a subset of the website. The scraped data is stored in the `storage/` directory, and can be accessed through the `content.py` module.
+
+The project can be extended to include additional functionality, such as support for different types of data storage, integration with database systems, and more advanced crawling and scraping techniques.
 

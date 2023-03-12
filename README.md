@@ -37,10 +37,10 @@ You can install these packages by running the following command:
 
 To run the distributed web crawler, you need to run multiple instances of the `node.py` file in separate terminal windows. For example, to run four instances, you can run the following commands in four separate terminal windows:
 
-`python node.py 5000<br />
-python node.py 5001<br />
-python node.py 5002<br />
-python node.py 5003`
+`python node.py 5000`<br />
+`python node.py 5001`<br />
+`python node.py 5002`<br />
+`python node.py 5003`
 
 Then, in another terminal window, you can run the app.py file to interact with the distributed web crawler:
 `python app.py

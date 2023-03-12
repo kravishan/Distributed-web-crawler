@@ -61,3 +61,11 @@ This module contains a function to check if a file exists and print its HTML con
 ### Functions
 `check_if_exists_and_print_html(name)`: This function takes in a file name and checks if the file exists. If it exists, it prints its HTML content. If it does not exist, it prints a message saying that the file is not accessible.
 
+## crawler.py
+This module contains functions to crawl a given URL and extract text content from its HTML.
+### Functions
+- `validate_url(url): This function takes in a URL and returns True if the URL is valid and False otherwise.
+- `extract_text(html)`: This function takes in an HTML string and extracts the title and text content from it.
+- `hard_disk_store(html, url)`: This function takes in an HTML string and a URL, and stores the HTML content on disk with a filename based on the URL.
+- `crawl(url)`: This function
+

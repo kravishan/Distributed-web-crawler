@@ -42,9 +42,15 @@ To run the distributed web crawler, you need to run multiple instances of the `n
 `python node.py 5002`<br />
 `python node.py 5003`
 
+You also need to start a Prometheus server to collect and store metrics. You can start the server by running the following command in a separate terminal window:
+` python node.py 9000`
+
 Then, in another terminal window, you can run the app.py file to interact with the distributed web crawler:
+
 `python app.py
 `
+Note that the Prometheus server will be running on port 9000. You can access the Prometheus dashboard by visiting http://localhost:9000 in your web browser. The dashboard will show you health information about every node.
+
 ## app.py
 This is the main module of the project which serves as the entry point to the application. It contains a loop that waits for user input to either crawl or scrape a website.
 

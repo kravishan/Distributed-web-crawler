@@ -47,3 +47,17 @@ Then, in another terminal window, you can run the app.py file to interact with t
 `
 ## app.py
 This is the main module of the project which serves as the entry point to the application. It contains a loop that waits for user input to either crawl or scrape a website.
+
+### Functions
+
+- `make_urls(number_of_ports)`: This function takes in the number of ports and returns a list of URLs based on the number of ports.
+- `get_random_url(list_of_urls)`: This function takes in a list of URLs and returns a random URL from the list.
+- `scrape_website(url, params)`: This function takes in a URL and a dictionary of parameters and returns the scraped data as a dictionary.
+- `crawl_website(url, params)`: This function takes in a URL and a dictionary of parameters and crawls the website, storing the HTML content and returning a list of child URLs.
+- `main()`: This function is the entry point to the application. It contains a loop that waits for user input to either crawl or scrape a website.
+
+## content.py
+This module contains a function to check if a file exists and print its HTML content.
+### Functions
+`check_if_exists_and_print_html(name)`: This function takes in a file name and checks if the file exists. If it exists, it prints its HTML content. If it does not exist, it prints a message saying that the file is not accessible.
+

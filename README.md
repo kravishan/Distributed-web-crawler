@@ -1,8 +1,14 @@
 # Distributed Web Crawler
 
-## File Descriptions:
+## Project Structure:
 
-`README.md`: The README file for the project. This is where you should include a brief introduction to the project, installation instructions, usage instructions, and other relevant information about the project.<br />
+├── app.py
+├── content.py
+├── crawler.py
+├── generate_urls.py
+├── node.py
+└── README.md
+
 `app.py`: The main script for the project. This script allows the user to interact with the command-line interface and choose between scraping or crawling.<br />
 `generate_urls.py`: A module that generates a list of URLs for the crawler to use.<br />
 `scraper.py`: A module that contains functions for scraping a website.<br />
@@ -12,13 +18,32 @@
 `storage/`: A directory where the scraped data is stored.<br />
 `requirements`.txt: A file that lists the required packages for the project.
 
-## Installation:
-To install the required packages for this project, run the following command:
+## Requirements:
+Before running the application, you need to have the following packages installed:
+
+- `requests`
+- `beautifulsoup4`
+- `flask`
+- `prometheus_client`
+- `validators`
+- `aiohttp`
+- `asyncio`
+
+You can install these packages by running the following command:
 `pip install -r requirements.txt
 `
-## Usage:
-To start the web scraper, run the following command:
+
+## How to Run:
+
+To run the distributed web crawler, you need to run multiple instances of the `node.py` file in separate terminal windows. For example, to run four instances, you can run the following commands in four separate terminal windows:
+
+`python node.py 5000
+python node.py 5001
+python node.py 5002
+python node.py 5003`
+
+Then, in another terminal window, you can run the app.py file to interact with the distributed web crawler:
+`python app.py
 `
-python app.py
-`
-<br /><br />The program will prompt you to choose between crawling or scraping. If you choose to crawl, you will be prompted to enter a website and the number of levels to crawl. If you choose to scrape, you will be prompted to enter a website and a filename to save the scraped data to.
+## app.py
+This is the main module of the project which serves as the entry point to the application. It contains a loop that waits for user input to either crawl or scrape a website.

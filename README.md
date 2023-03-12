@@ -2,12 +2,12 @@
 
 ## Project Structure:
 
-├── app.py
-├── content.py
-├── crawler.py
-├── generate_urls.py
-├── node.py
-└── README.md
+├── app.py<br />
+├── content.py<br />
+├── crawler.py<br />
+├── generate_urls.py<br />
+├── node.py<br />
+└── README.md<br />
 
 `app.py`: The main script for the project. This script allows the user to interact with the command-line interface and choose between scraping or crawling.<br />
 `generate_urls.py`: A module that generates a list of URLs for the crawler to use.<br />

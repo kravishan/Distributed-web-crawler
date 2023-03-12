@@ -51,7 +51,7 @@ Then, in another terminal window, you can run the app.py file to interact with t
 
 `python app.py
 `
-<br /><br />Note that the Prometheus server will be running on port 9000. You can access the Prometheus dashboard by visiting http://localhost:9000 in your web browser. The dashboard will show you health information about every node.
+<br /><br />Note that the Prometheus server will be running on port 9000. You can access the Prometheus dashboard by visiting http://localhost:9000/health in your web browser. The dashboard will show you health information about every node.
 
 ## app.py
 This is the main module of the project which serves as the entry point to the application. It contains a loop that waits for user input to either crawl or scrape a website.

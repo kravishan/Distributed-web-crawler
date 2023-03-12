@@ -21,4 +21,4 @@ To start the web scraper, run the following command:
 `
 python app.py
 `
-<br />The program will prompt you to choose between crawling or scraping. If you choose to crawl, you will be prompted to enter a website and the number of levels to crawl. If you choose to scrape, you will be prompted to enter a website and a filename to save the scraped data to.
+<br /><br />The program will prompt you to choose between crawling or scraping. If you choose to crawl, you will be prompted to enter a website and the number of levels to crawl. If you choose to scrape, you will be prompted to enter a website and a filename to save the scraped data to.

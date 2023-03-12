@@ -68,3 +68,33 @@ This module contains functions to crawl a given URL and extract text content fro
 - `extract_text(html)`: This function takes in an HTML string and extracts the title and text content from it.
 - `hard_disk_store(html, url)`: This function takes in an HTML string and a URL, and stores the HTML content on disk with a filename based on the URL.
 - `crawl(url)`: This function takes in a URL, crawls the website, and returns a list of child URLs. It first checks if the URL is valid using `validate_url()`. Then, it requests the page using the requests library, and extracts the HTML content using the `extract_text()` function. The HTML content is then stored on disk using `hard_disk_store()`. Finally, the function uses `beautifulsoup4` to parse the HTML and extract all child URLs, which are returned as a list.
+
+## generate_urls.py
+This module generates a list of URLs for the crawler to use.
+
+### Functions
+`generate_urls(port)`: This function takes in a port number and generates a list of URLs based on that port number. It uses the validators library to ensure that the URLs are valid.
+
+## node.py
+This module defines a Flask app and serves as the endpoint for the scraper and crawler.
+### Functions
+`start_node(port)`: This function takes in a port number and starts a Flask app on that port. It defines two routes: `/scrape` and `/crawl`. Both routes accept a URL and a list of parameters as JSON in the request body. The `/scrape` route calls the `scraper.py` module to scrape the website, and returns the scraped data as JSON. The `/crawl` route calls the `crawler.py` module to crawl the website, and returns a list of child URLs as JSON.
+
+## scraper.py
+This module contains functions for scraping a website.
+### Functions
+`scrape_website(url, params)`: This function takes in a URL and a dictionary of parameters and returns the scraped data as a dictionary. It uses the requests library to `request` the page, and `beautifulsoup4` to extract the data.
+
+## app.py
+This is the main module of the project which serves as the entry point to the application. It contains a loop that waits for user input to either crawl or scrape a website.
+
+### Functions
+- `make_urls(number_of_ports)`: This function takes in the number of ports and returns a list of URLs based on the number of ports.
+- `get_random_url(list_of_urls)`: This function takes in a list of URLs and returns a random URL from the list.
+- `scrape_website(url, params)`: This function takes in a URL and a dictionary of parameters and returns the scraped data as a dictionary.
+- `crawl_website(url, params)`: This function takes in a URL and a dictionary of parameters and crawls the website, storing the HTML content and returning a list of child URLs.
+- `main()`: This function is the entry point to the application. It contains a loop that waits for user input to either crawl or scrape a website.
+
+## storage/
+This directory is where the scraped data is stored. The data is stored as HTML files, with filenames based on the URLs.
+

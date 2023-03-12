@@ -42,8 +42,8 @@ To run the distributed web crawler, you need to run multiple instances of the `n
 `python node.py 5002`<br />
 `python node.py 5003`
 
-You also need to start a Prometheus server to collect and store metrics. You can start the server by running the following command in a separate terminal window:
-` python node.py 9000`
+You also need to start a Prometheus server to collect and store metrics. You can start the server by running the following command in a separate terminal window:<br />
+`python node.py 9000`
 
 Then, in another terminal window, you can run the app.py file to interact with the distributed web crawler:
 

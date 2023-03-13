@@ -31,19 +31,16 @@ The Distributed Web Crawler is a Python project that allows users to crawl and s
 `util.py`: A module that contains utility functions used throughout the project.
 
 ## Requirements:
-Before running the application, you need to have the following packages installed:
+Before running the application, you need to have the all packages installed. Mostly we use these packages to do our task:
 
 - `requests`
 - `beautifulsoup4`
 - `flask`
-- `prometheus_client`
-- `validators`
-- `aiohttp`
-- `asyncio`
 
 You can install these packages by running the following command:
 `pip install -r requirements.txt
 `
+Make sure to run this command in the project directory, where the requirements.txt file is located. This will install all the necessary packages for running the application.
 
 ## How to Run:
 

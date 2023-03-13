@@ -25,9 +25,9 @@ The Distributed Web Crawler is a Python project that allows users to crawl and s
 `scraper.py`: A module that contains functions for scraping a website.<br />
 `storage/`: A directory where the scraped data is stored.<br />
 `README.md`: A file that contains information about the project.<br />
-`requirements.txt`: A file that lists the required packages for the project.
-`health_monitor.py`: A module that monitors the health of the crawler and scraper and sends alerts if any issues are detected.
-`make_graph_function.py`: A module that contains a function to visualize the scraped data in a graph.
+`requirements.txt`: A file that lists the required packages for the project.<br />
+`health_monitor.py`: A module that monitors the health of the crawler and scraper and sends alerts if any issues are detected.<br />
+`make_graph_function.py`: A module that contains a function to visualize the scraped data in a graph.<br />
 `util.py`: A module that contains utility functions used throughout the project.
 
 ## Requirements:

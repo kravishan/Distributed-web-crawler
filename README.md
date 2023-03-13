@@ -40,21 +40,13 @@ Before running the application, you need to have the all packages installed. Mos
 You can install these packages by running the following command:
 `pip install -r requirements.txt
 `
-Make sure to run this command in the project directory, where the requirements.txt file is located. This will install all the necessary packages for running the application.
+<br />Make sure to run this command in the project directory, where the requirements.txt file is located. This will install all the necessary packages for running the application.
 
 ## How to Run:
 
-To run the distributed web crawler, you need to run multiple instances of the `node.py` file in separate terminal windows. For example, to run four instances, you can run the following commands in four separate terminal windows:
+To run the distributed web crawler, you need to run the app.py file. The program will automatically start the necessary number of instances of the node.py file and the Prometheus server.
 
-`python node.py 5000`<br />
-`python node.py 5001`<br />
-`python node.py 5002`<br />
-`python node.py 5003`
-
-You also need to start a Prometheus server to collect and store metrics. You can start the server by running the following command in a separate terminal window:<br /><br />
-`python node.py 9000`
-
-Then, in another terminal window, you can run the app.py file to interact with the distributed web crawler:
+To run the program, open a terminal window, navigate to the project directory, and run the following command:
 
 `python app.py
 `

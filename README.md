@@ -70,7 +70,7 @@ The main code starts by asking the user to enter the number of nodes to create. 
 
 The code then enters a loop where it waits for user input. If the user enters "crawl", the code prompts the user to enter a website and the number of levels to crawl. It then chooses a random URL from the list of URLs generated earlier and sends a request to that URL with the website and levels as parameters.
 
-If the user enters "make_graph", the code prompts the user to enter a website and the depth for the graph. The code then sends requests to all the URLs in the list with the website and depth as parameters. The responses from all the requests are combined into a dictionary containing the adjacency list representation of the graph, which is then passed to the `make_graph_from_adjacency_list` function.
+If the user enters `make_graph`, the code prompts the user to enter a website and the depth for the graph. The code then sends requests to all the URLs in the list with the website and depth as parameters. The responses from all the requests are combined into a dictionary containing the adjacency list representation of the graph, which is then passed to the `make_graph_from_adjacency_list` function.
 
 If the user enters `show_html`, the code prompts the user to enter a website. It then checks if the HTML file for that website exists in the storage directory and if it does, prints the HTML content.
 

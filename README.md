@@ -4,21 +4,31 @@ The Distributed Web Crawler is a Python project that allows users to crawl and s
 
 ## Project Structure:
 
-├── app.py<br />
+├── main.py<br />
 ├── content.py<br />
 ├── crawler.py<br />
 ├── generate_urls.py<br />
+├── health_monitor.py<br />
+├── make_graph_function.py<br />
 ├── node.py<br />
-└── README.md<br />
+├── README.md<br />
+├── storage/<br />
+├── util.py<br />
+└── requirements.txt<br />
 
-`app.py`: The main script for the project. This script allows the user to interact with the command-line interface and choose between scraping or crawling.<br />
+
+`main.py`: The main script for the project and this work as master node. This script allows the user to interact with the command-line interface and choose between scraping or crawling.<br />
 `content.py`: A module that contains a function to check if a file exists and print its content.<br />
 `crawler.py`: A module that contains functions for crawling a website.<br />
 `generate_urls.py`: A module that generates a list of URLs for the crawler to use.<br />
 `node.py`: A module that defines a Flask app and serves as the endpoint for the scraper and crawler.<br />
 `scraper.py`: A module that contains functions for scraping a website.<br />
 `storage/`: A directory where the scraped data is stored.<br />
-`requirements`.txt: A file that lists the required packages for the project.
+`README.md`: A file that contains information about the project.<br />
+`requirements.txt`: A file that lists the required packages for the project.
+`health_monitor.py`: A module that monitors the health of the crawler and scraper and sends alerts if any issues are detected.
+`make_graph_function.py`: A module that contains a function to visualize the scraped data in a graph.
+`util.py`: A module that contains utility functions used throughout the project.
 
 ## Requirements:
 Before running the application, you need to have the following packages installed:

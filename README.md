@@ -52,16 +52,29 @@ To run the program, open a terminal window, navigate to the project directory, a
 `
 <br /><br />Note that the Prometheus server will be running on port 9000. You can access the Prometheus dashboard by visiting http://localhost:9000/health in your web browser. The dashboard will show you health information about every node.
 
-## app.py
-This is the main module of the project which serves as the entry point to the application. It contains a loop that waits for user input to either crawl or scrape a website.
+## main.py
+This is the main module of the project which serves as the entry point to the application. It contains a loop that waits for user input to either crawl, make a graph, show html, or exit the program.
 
 ### Functions
 
 - `make_urls(number_of_ports)`: This function takes in the number of ports and returns a list of URLs based on the number of ports.
 - `get_random_url(list_of_urls)`: This function takes in a list of URLs and returns a random URL from the list.
-- `scrape_website(url, params)`: This function takes in a URL and a dictionary of parameters and returns the scraped data as a dictionary.
-- `crawl_website(url, params)`: This function takes in a URL and a dictionary of parameters and crawls the website, storing the HTML content and returning a list of child URLs.
-- `main()`: This function is the entry point to the application. It contains a loop that waits for user input to either crawl or scrape a website.
+- `start_all_nodes(number_of_ports)`: This function takes in the number of ports and starts all the nodes.
+- `start_health_monitor(number_of_ports)`: This function takes in the number of ports and starts the health monitor.
+- `check_if_exists_and_print_html(name)`: This function takes in the name of the file and checks if it exists in the storage directory. If it exists, it prints the HTML content of the file.
+- `make_graph_from_adjacency_list(response_dict)`: This function takes in a dictionary containing the adjacency list representation of a graph and generates a line graph.
+
+### Main Code
+
+The main code starts by asking the user to enter the number of nodes to create. It then calls the `make_urls` function to generate the URLs for the nodes. If the number of nodes entered by the user exceeds the maximum number of nodes allowed, the code creates the maximum number of nodes allowed. The code then starts all the nodes and the health monitor.
+
+The code then enters a loop where it waits for user input. If the user enters "crawl", the code prompts the user to enter a website and the number of levels to crawl. It then chooses a random URL from the list of URLs generated earlier and sends a request to that URL with the website and levels as parameters.
+
+If the user enters "make_graph", the code prompts the user to enter a website and the depth for the graph. The code then sends requests to all the URLs in the list with the website and depth as parameters. The responses from all the requests are combined into a dictionary containing the adjacency list representation of the graph, which is then passed to the `make_graph_from_adjacency_list` function.
+
+If the user enters `show_html`, the code prompts the user to enter a website. It then checks if the HTML file for that website exists in the storage directory and if it does, prints the HTML content.
+
+If the user enters "exit", the program exits. If the user enters an invalid command, the program prompts the user to enter a valid command.
 
 ## content.py
 This module contains a function to check if a file exists and print its HTML content.
